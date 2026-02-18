@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="user-display">Welcome, Student</div>
+        <nav>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="dashboard-title">Your Enrolled Courses</h2>
+        <div id="my-courses-container" class="grid">
+            <!-- Populated by JS -->
+        </div>
+
+        <h2 class="dashboard-title">Available Courses</h2>
+        <div id="courses-container" class="grid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        checkAuth('student');
+        fetchMyCourses();
+        fetchCourses();
+    </script>
+</body>
+
+</html>
